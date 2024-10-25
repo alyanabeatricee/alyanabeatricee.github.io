@@ -1,0 +1,293 @@
+.bg {
+    background-image: url('pictures/bg.jpg');
+}
+
+.discography {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.disc {
+    margin: 30px 0;
+    background-color: #b72b2b;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.disc:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #b72b2b;
+    background-color: #fff;
+}
+
+.disc:hover::after {
+    width: 100%;
+}
+
+.title {
+    position: relative;
+    margin: 30px 0;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+    padding: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    color: #b72b2b;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.title:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    color: #b72b2b;
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.title:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 0;
+    height: 3px;
+    background-color: #b72b2b;
+    transition: width 0.5s ease, left 0.5s ease;
+    opacity: 0;
+}
+
+.title:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+.discography-images {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: fit-content;
+    height: 500px;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.discography-images img {
+    width: 12%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: width 0.5s ease-in-out;
+    border: 2px solid #ccc;
+}
+
+.discography-images img:hover {
+    width: 500px;
+    transform: scale(1.2);
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.album-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(183, 43, 43, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.album-item:hover {
+    transform: scale(1.05);
+}
+
+.album-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 2rem;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+    color: #b72b2b;
+}
+
+.album-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: large;
+    font-weight: bold;
+}
+
+.album-info p {
+    margin: 0 0 0.5rem 0;
+    font-weight: 50%;
+    font-size: 11px;
+}
+
+.album-info a {
+    display: inline-block;
+    background-color: #b72b2b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin: 0 0 0.5rem 0;
+}
+
+.album-info a:hover {
+    background-color: #000;
+    color: white;
+}
+
+.songs-list {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.song-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: large;
+    font-weight: bold;
+}
+
+.popular-songs h2,
+.collab-songs h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    color: #b72b2b;
+}
+
+.collab-info h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: large;
+    font-weight: bold;
+}
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.collab-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.song-item,
+.collab-item {
+    display: block;
+    background-color: rgba(183, 43, 43, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.song-item:hover,
+.collab-item:hover {
+    transform: scale(1.05);
+}
+
+.song-item img,
+.collab-item img {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.collab-item img {
+    max-width: 200px;
+}
+
+.song-info,
+.collab-info {
+    text-align: left;
+    color: #b72b2b;
+}
+
+@media (max-width: 768px) {
+    .album-grid,
+    .popular-grid,
+    .collab-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    .album-item img {
+        width: 150px;
+    }
+    .popular-songs h2,
+    .collab-songs h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .album-grid {
+        grid-template-columns: 1fr;
+    }
+}

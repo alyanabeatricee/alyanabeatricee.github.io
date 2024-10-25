@@ -1,0 +1,288 @@
+.bg {
+    background-image: url('pictures/bg.jpg'); 
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    max-width: fit-content;
+    height: 400px;
+    gap: 5px;
+    justify-content: center;
+    background-color: #000000;
+    padding: 10px 0;
+    margin-top: 5%;
+}
+
+.cards img {
+    width: 8%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: width 0.5s ease-in-out;
+    border: 2px solid #665f5f;
+}
+
+.cards img:hover {
+    width: 500px;
+    transform: scale(1.1);
+}
+
+.years {
+    margin: 30px 0;
+    background-color: #b72b2b;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.years:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #b72b2b;
+    background-color: #fff;
+}
+
+.years::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 3px;
+    background-color: #b72b2b;
+    transition: width 0.5s;
+}
+
+.years:hover::after {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+p {
+    font-size: 12px;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+li {
+    list-style: none;
+    font-size: 12px;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
+    background-image: url('pictures/bg.jpg');
+}
+
+.introduction-row, 
+.swiftie-row {
+    max-width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.swiftie-row:hover,
+.introduction-row:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: #b72b2b;
+}
+
+.introduction-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.introduction-images img {
+    height: auto;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 10px solid #ffe;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.introduction-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 10px solid #ffe;
+}
+
+.two-column-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 70%;
+    padding: 20px;
+    gap: 30px;
+}
+
+.biography-section,
+.achievements-section,
+.tours-section,
+.fanbase-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+}
+
+.biography-section img,
+.achievements-section img,
+.tours-section img,
+.fanbase-section img {
+    border: 10px solid #ffe;
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.biography-section:hover,
+.achievements-section:hover,
+.tours-section:hover,
+.fanbase-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: #b72b2b;
+}
+
+.biography-section img:hover,
+.achievements-section img:hover,
+.tours-section img:hover,
+.fanbase-section img:hover {
+    border: 10px solid #ffe6e6;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+
+    .years {
+        font-size: 28px; 
+        padding: 8px 15px; 
+    }
+
+    .about-wrapper {
+        max-width: 90%; 
+    }
+}
+
+@media (max-width: 767px) {
+    .two-column-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .introduction-images {
+        grid-template-columns: 1fr; 
+    }
+
+    .about-wrapper {
+        margin-top: 2rem; 
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 11px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .cards {
+        margin-top: 120px;
+    }
+    .years {
+        font-size: 24px;
+        padding: 5px 10px; 
+    }
+
+    h2 {
+        font-size: 20px; 
+    }
+
+    p {
+        font-size: 10px; 
+    }
+
+    .biography-section img,
+    .achievements-section img,
+    .tours-section img,
+    .fanbase-section img {
+        height: 200px; 
+    }
+}
+@media (max-width: 1200px) {
+    .introduction-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .introduction-images {
+        grid-template-columns: 1fr;
+    }
+
+    .two-column-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction-row, 
+    .swiftie-row {
+        max-width: 90%;
+    }
+
+    .about-wrapper {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .introduction-images img {
+        width: 100%;
+    }
+}

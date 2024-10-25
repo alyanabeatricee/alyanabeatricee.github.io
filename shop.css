@@ -1,0 +1,240 @@
+.bg {
+    background-image: url('pictures/bg.jpg'); 
+    padding-bottom: 50px;
+}
+
+.shopbanner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-image: url('pictures/shop.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.chen {
+    text-align: center;
+    padding: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    background-color: #b72b2b;
+    color: #fff;
+    font-size: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.chen:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: #b72b2b;
+    background-color: #fff;
+}
+
+.heading {
+    font-size: 2.5em;
+    color: #b72b2b;
+    text-align: left;
+    margin-top: 2em;
+    margin-bottom: 10px;
+}
+
+.features {
+    width: 100%;
+    padding: 0rem 10rem;
+    padding-bottom: 5rem;
+}
+
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+    padding: 0;
+}
+
+.features .box-container .box {
+    padding: 2rem;
+    background: white;
+    outline-offset: -1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: outline-offset 0.3s ease, transform 0.3s ease;
+}
+
+.features .box-container .box:hover {
+    outline-offset: 0rem;
+    transform: scale(1.1);
+}
+
+.features .box-container .box img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.features .box-container .box h3 {
+    font-size: 1.5em;
+    color: #b72b2b;
+    margin-bottom: 1rem;
+}
+
+.features .box-container .box p {
+    color: black;
+    font-size: 1em;
+    margin-bottom: 1rem;
+}
+
+.features .box-container .box .btn {
+    display: inline-block;
+    background-color: #b72b2b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.features .box-container .box .btn:hover {
+    background-color: #000;
+    color: white;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #b72b2b;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .chen {
+        font-size: 30px;
+    }
+
+    .heading {
+        font-size: 2em;
+    }
+
+    .features {
+        padding: 0rem 5rem;
+    }
+
+    .features .box-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .shopbanner {
+        height: 70vh;
+        background-position: top;
+    }
+}
+
+@media (max-width: 991px) {
+    .chen {
+        font-size: 28px;
+    }
+
+    .heading {
+        font-size: 1.8em;
+    }
+
+    .features {
+        padding: 0rem 3rem;
+    }
+
+    .features .box-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features .box-container .box {
+        padding: 1.5rem;
+    }
+
+    .shopbanner {
+        height: 60vh;
+        flex-direction: column; 
+        background-position: center;
+        background-size: cover;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .chen {
+        font-size: 24px;
+    }
+
+    .heading {
+        font-size: 1.5em;
+    }
+
+    .features {
+        padding: 0rem 2rem;
+    }
+
+    .features .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .features .box-container .box {
+        padding: 1rem;
+    }
+
+    .features .box-container .box img {
+        max-width: 200px;
+    }
+
+    .shopbanner {
+        height: 50vh;
+        background-size: contain; 
+        padding: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    .chen {
+        font-size: 22px;
+    }
+
+    .heading {
+        font-size: 1.4em;
+    }
+
+    .features {
+        padding: 0rem 1rem;
+    }
+
+    .features .box-container .box h3 {
+        font-size: 1.2em;
+    }
+
+    .features .box-container .box p {
+        font-size: 0.9em;
+    }
+
+    .features .box-container .box .btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .price {
+        font-size: 1em;
+    }
+
+    .shopbanner {
+        height: 40vh;
+        background-size: cover;
+        padding: 10px;
+    }
+}
